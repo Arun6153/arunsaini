@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg-color:#fff;
+  --bg-image: radial-gradient(#2e2d29, #121212);
+
+  /* FONT-FAMILY */
+  --font-family-big:'Anton', sans-serif;
+  --font-family-small:'Comfortaa', cursive;
+
+  /* FONT-COLORs */
+  --font-color: #121212;
+  --font-color-fade: #616161;
+
+  /* FONT-SIZE */
+  --font-size-small:13px;
+  --font-size-medium:16px;
+  --font-size-large:18px;
+  --font-size-lg-small:25px;
+  --font-size-lg-medium:36px;
+  --font-size-lg-large:45px;
+
+  /* FONT WEIGHT */
+  --font-weight-small:400;
+  --font-weight-medium:500;
+  --font-weight-large:700;
+}
+
+.god-container{
+  height: 100vh;
+  width: 100vw;
+  background-image: var(--bg-image);
+  overflow: auto;
+  padding: 2rem 15%;
+}
+
+.main-div{
+  max-width: 1140px;
+  margin: auto;
+  position: relative;
+  /* width: 100%; */
+  background-color: var(--bg-color);
+  height: auto;
+
+  border-radius: 10px;
+}
+
+

@@ -1,0 +1,44 @@
+.demographic-section{
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+}
+
+.name-profile, .contacts{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  height: 100%;
+  padding:30px 0px;
+}
+
+.name{
+  height: 100%;
+  font-family: var(--font-family-big);
+  font-size: var(--font-size-lg-large);
+  font-weight: var(--font-weight-large);
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.profile{
+  height: 100%;
+  font-family: var(--font-family-small);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-large);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.contact-item{
+  height: 100%;
+  color: var(--font-color-fade);
+  text-decoration: none;
+  font-family: var(--font-family-small);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-small);
+  text-align: right;
+}
