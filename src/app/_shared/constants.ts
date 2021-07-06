@@ -123,3 +123,107 @@ export const projectList:{
   },
 ]
 
+export const certificationList:{
+  name:string,
+  link:string,
+  icon:string
+}[] = [
+  {
+    name:"JAVA - Hackerrank",
+    link:"hackerrank.com/certificates/7680112bd66f",
+    icon:"fas fa-caret-right"
+  },
+  {
+    name:"Problem Solving - Hackerrank",
+    link:"hackerrank.com/certificates/a00dba1fd8a8",
+    icon:"fas fa-caret-right"
+  },
+  {
+    name:"Responsive Web Design",
+    link:"freecodecamp.org/certification/arunsaini/responsive-webdesign",
+    icon:"fas fa-caret-right"
+  },
+]
+
+export const hobyIntrList:{
+    title:string,
+    desc:string
+}[] = [
+  {
+    title:"Hobbies",
+    desc: "Drawing , Singing , Designing and Gaming"
+  },
+  {
+    title:"Interests",
+    desc: "Reading Forums on Quora and also started game development."
+  }
+]
+
+export const achievmentList:{
+  icon:string,
+  rank:string,
+  desc:string,
+  org:string,
+}[] = [
+  {
+    icon:"fas fa-caret-right",
+    rank:"1st Prize",
+    desc:", Annual Technical fest",
+    org:"Techlone2019"
+  },
+  {
+    icon:"fas fa-caret-right",
+    rank:"Top 10",
+    desc:"in Rank,at UIET",
+    org:"HackUIET"
+  },
+  {
+    icon:"fas fa-caret-right",
+    rank:"Top 6",
+    desc:"in Rank National Hackathon, Got an opportunity of direct interview in CodeQuotient",
+    org:"BreakPoint 2019."
+  },
+  {
+    icon:"fas fa-caret-right",
+    rank:"",
+    desc:"Worked on client side for a 1.6 year, then in July 2021 they absorbed me from CodeQuotient for SDE position",
+    org:""
+  },
+]
+
+export const skillList:{
+  title:string,
+  skills:string[],
+  left:boolean
+}[] = [
+  {
+    title:"PROGRAMMING LANGUAGE",
+    skills:["JAVA", "C#", "JavaScript/TypeScript"],
+    left:true
+  },
+  {
+    title:"FRONTEND",
+    skills:["Angular", "HTML & CSS", "ReactJS"],
+    left:false
+  },
+  {
+    title:"DATABASE",
+    skills:["SQL", "PostGreSQL", "MongoDB"],
+    left:true
+  },
+  {
+    title:"PROJECT MANAGEMENT",
+    skills:["TFS", "Trello", "Git"],
+    left:false
+  },
+  {
+    title:"BACKEND",
+    skills:["ADO.net, C#", "NodeJS (EXPRESS)"],
+    left:true
+  },
+  {
+    title:"LOGIC AND ALGORITHM",
+    skills:["Data Structures", "Problem Solving"],
+    left:false
+  }
+]

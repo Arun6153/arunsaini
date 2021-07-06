@@ -7,14 +7,19 @@
         <div class="profile">Software Development Engineer</div>
       </div>
       <div class="contacts">
-        <a class="contact-item" href="linkedin.com/in/arun-saini-6bba81148">linkedin.com/in/arun-saini-6bba81148 <i
+        <a class="contact-item" href="linkedin.com/in/arun-saini-6bba81148">linkedin.com/in/arun-saini-6bba81148
+          <i
             class="fab fa-linkedin"></i></a>
-        <a class="contact-item" href="github.com/Arun6153">github.com/Arun6153 <i class="fab fa-github-square"></i></a>
-        <a class="contact-item" href="arunsaini.herokuapp.com">arunsaini.herokuapp.com <i
+        <a class="contact-item" href="github.com/Arun6153">github.com/Arun6153
+          <i class="fab fa-github-square"></i></a>
+        <a class="contact-item" href="arunsaini.herokuapp.com">arunsaini.herokuapp.com
+          <i
             class="fas fa-user-tie"></i></a>
-        <a class="contact-item" href="mailto:sarun6153@gmail.com">sarun6153@gmail.com <i
+        <a class="contact-item" href="mailto:sarun6153@gmail.com">sarun6153@gmail.com
+          <i
             class="fas fa-envelope"></i></a>
-        <a class="contact-item" href="tel:8607972097">8607972097 <i class="fas fa-phone-square"></i></a>
+        <a class="contact-item" href="tel:8607972097">8607972097 <i class="fas
+            fa-phone-square"></i></a>
       </div>
     </div>
 
@@ -69,8 +74,49 @@
             </div>
           </div>
         </div>
+
+        <!-- CERTIFICATION -->
+        <div class="certificate-section pd-y">
+          <div class="section-header pd-y">
+            {{ constants.section_certification }}
+          </div>
+        </div>
+        <div class="certificate pd-y" *ngFor="let item of
+          constants.certificationList">
+          <div class="icon-div pd-y"><i [class]="item.icon"></i></div>
+          <div class="name-and-link pd-y">
+            <div class="name">
+              <div>
+                {{item.name}}
+              </div>
+            </div>
+            <div class="link-desc pd-y" *ngIf="item.link">
+              {{item.link}}
+            </div>
+          </div>
+        </div>
+
+        <!-- HOBBIES AND INTEREST -->
+        <div class="hobbie-intrest-section pd-y">
+          <div class="section-header pd-y">
+            {{ constants.section_interest }}
+          </div>
+        </div>
+        <div class="hobie-intrest-desc pd-y" *ngFor="let item of constants.hobyIntrList">
+          <div class="hobie-intrest">
+            <div>
+              {{item.title}}
+            </div>
+            <div class="desc-hoby">
+              {{item.desc}}
+            </div>
+          </div>
+        </div>
+
       </div>
+
       <div class="mid-section"></div>
+
       <div class="right-section">
         <!-- EXPERIENCE SECTION -->
         <div class="experience-section pd-y">
@@ -78,7 +124,8 @@
             {{ constants.section_exper }}
           </div>
         </div>
-        <div class="experience pd-y" *ngFor="let item of constants.experienceList">
+        <div class="experience pd-y" *ngFor="let item of
+          constants.experienceList">
           <div class="icon-div pd-y"><i [class]="item.icon"></i></div>
           <div class="organisation-timeline-desc-responsiblity pd-y">
             <div class="organisation-timeline">
@@ -92,14 +139,61 @@
             <div class="exper-desc pd-y" *ngIf="item.description">
               {{item.description}}
             </div>
-            <div class="responsiblity-div pd-y" *ngIf="item.responsiblities.resList.length>0">
+            <div class="responsiblity-div pd-y"
+              *ngIf="item.responsiblities.resList.length>0">
               <p>{{item.responsiblities.title}}</p>
               <div class="resList pd-y">
-                <div class="responsiblity-item" *ngFor="let res of item.responsiblities.resList">
+                <div class="responsiblity-item" *ngFor="let res of
+                  item.responsiblities.resList">
                   <div class="bubble">{{res}}</div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- ACHIEVMENTS -->
+        <div class="acheivment-section pd-y">
+          <div class="section-header pd-y">
+            {{ constants.section_acheiv }}
+          </div>
+        </div>
+        <div class="acheivment pd-y" *ngFor="let item of
+          constants.achievmentList">
+          <div class="icon-div pd-y"><i [class]="item.icon"></i></div>
+          <div class="rank-name-organisation pd-y">
+              <span class="ranks" *ngIf="item.rank">
+                {{item.rank}}
+              </span>
+              <span class="achiev-desc">
+                {{item.desc}}
+              </span>
+              <span class="orgnisation" *ngIf="item.org">{{" - " +item.org}}</span>
+          </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="skills-section pd-y">
+          <div class="section-header">
+            {{ constants.section_skills }}
+          </div>
+        </div>
+        <div class="skills pd-y">
+          <div class="left">
+            <ng-container *ngFor="let item of constants.skillList">
+              <ng-container  *ngIf="item.left" >
+              <div class="header-skill">{{item.title}}</div>
+                <div class="skill-item" *ngFor="let skill of item.skills">{{skill}}</div>
+              </ng-container>
+            </ng-container>
+          </div>
+          <div class="right">
+            <ng-container *ngFor="let item of constants.skillList">
+              <ng-container  *ngIf="!item.left" >
+              <div class="header-skill">{{item.title}}</div>
+                <div class="skill-item" *ngFor="let skill of item.skills">{{skill}}</div>
+              </ng-container>
+            </ng-container>
           </div>
         </div>
       </div>
