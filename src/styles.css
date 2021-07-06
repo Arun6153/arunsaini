@@ -21,7 +21,7 @@
   --font-color: #121212;
   --font-color-fade: #616161;
   --font-color-blue: #274fbe;
-  --font-color-white-300:rgb(184, 184, 184);
+  --font-color-white-300:rgb(158, 150, 150);
 
   /* BORDER-COLOR */
   --border-color-blue:rgb(0, 94, 172);
@@ -56,7 +56,7 @@
   position: relative;
   background-color: var(--bg-color);
   height: auto;
-  padding: 15px 40px;
+  padding: 15px 40px 40px;
   border-radius: 10px;
 }
 

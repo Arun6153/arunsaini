@@ -65,11 +65,11 @@
               {{item.name}} <small>{{item.small}}</small>
             </div>
           </div>
-          <div class="project-description">
-            <div class="marks">
+          <div class="project-description pd-y">
+            <div>
               {{item.desc}}
             </div>
-            <div *ngIf="item.link">
+            <div class="projectlink" *ngIf="item.link">
               {{item.link}}
             </div>
           </div>
@@ -85,14 +85,12 @@
           constants.certificationList">
           <div class="icon-div pd-y"><i [class]="item.icon"></i></div>
           <div class="name-and-link pd-y">
-            <div class="name">
-              <div>
+            <div class="certicate-name">
                 {{item.name}}
-              </div>
             </div>
-            <div class="link-desc pd-y" *ngIf="item.link">
+            <a class="link-desc pd-y" target="blank" [href]=" (!item.link)? null: item.link">
               {{item.link}}
-            </div>
+            </a>
           </div>
         </div>
 
@@ -139,7 +137,7 @@
             <div class="exper-desc pd-y" *ngIf="item.description">
               {{item.description}}
             </div>
-            <div class="responsiblity-div pd-y"
+            <div class="responsiblity-div"
               *ngIf="item.responsiblities.resList.length>0">
               <p>{{item.responsiblities.title}}</p>
               <div class="resList pd-y">

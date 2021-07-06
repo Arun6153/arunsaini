@@ -130,17 +130,17 @@ export const certificationList:{
 }[] = [
   {
     name:"JAVA - Hackerrank",
-    link:"hackerrank.com/certificates/7680112bd66f",
+    link:"https://www.hackerrank.com/certificates/7680112bd66f",
     icon:"fas fa-caret-right"
   },
   {
     name:"Problem Solving - Hackerrank",
-    link:"hackerrank.com/certificates/a00dba1fd8a8",
+    link:"https://www.hackerrank.com/certificates/a00dba1fd8a8",
     icon:"fas fa-caret-right"
   },
   {
     name:"Responsive Web Design",
-    link:"freecodecamp.org/certification/arunsaini/responsive-webdesign",
+    link:"https://www.freecodecamp.org//certification/arunsaini/responsive-web-design",
     icon:"fas fa-caret-right"
   },
 ]

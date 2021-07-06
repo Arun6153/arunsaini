@@ -185,7 +185,7 @@
 
 .organisation {
   font-size: var(--font-size-medium);
-  font-weight: var(--font-weight-large);
+  font-weight: var(--font-weight-lg-small);
 }
 
 .responsiblity-item {
@@ -208,14 +208,14 @@
   height: 350px;
 }
 
-.header-skill{
+.header-skill, .responsiblity-div p{
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-large);
   color: var(--font-color-white-300);
   padding-top: 10px;
 }
 
-.skill-item, .hobie-intrest div{
+.skill-item, .hobie-intrest div, .certicate-name{
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-lg-small);
 }
@@ -232,4 +232,27 @@
 }
 .ranks, .orgnisation{
   font-weight: var(--font-weight-lg-small);
+}
+
+.link-desc{
+  font-style: italic;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-large);
+  color: var(--font-color-white-300);
+  word-break: break-all;
+  text-decoration: none;
+}
+.project-name{
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-lg-small);
+}
+.project-description, .exper-desc{
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  text-align: justify;
+}
+.projectlink{
+  font-weight: var(--font-weight-lg-small);
+  font-size: var(--font-size-small);
+  text-align: end;
 }
