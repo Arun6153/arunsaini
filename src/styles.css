@@ -6,6 +6,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: var(--font-family-small);
 }
 
 :root{
@@ -19,8 +20,13 @@
   /* FONT-COLORs */
   --font-color: #121212;
   --font-color-fade: #616161;
+  --font-color-blue: #274fbe;
+
+  /* BORDER-COLOR */
+  --border-color-blue:rgb(0, 94, 172);
 
   /* FONT-SIZE */
+  --font-size-sm-small:10px;
   --font-size-small:13px;
   --font-size-medium:16px;
   --font-size-large:18px;
@@ -32,6 +38,7 @@
   --font-weight-small:400;
   --font-weight-medium:500;
   --font-weight-large:700;
+  --font-weight-lg-small:900;
 }
 
 .god-container{
@@ -46,11 +53,13 @@
   max-width: 1140px;
   margin: auto;
   position: relative;
-  /* width: 100%; */
   background-color: var(--bg-color);
   height: auto;
-
+  padding: 15px 40px;
   border-radius: 10px;
 }
 
-
+.pd-y{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

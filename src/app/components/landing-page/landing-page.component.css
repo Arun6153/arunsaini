@@ -1,19 +1,21 @@
-.demographic-section{
+/* HEADER: STARTS HERE */
+.demographic-section {
   height: 200px;
   display: flex;
   flex-direction: row;
 }
 
-.name-profile, .contacts{
+.name-profile,
+.contacts {
   width: 100%;
   display: flex;
   flex-direction: column;
   vertical-align: middle;
   height: 100%;
-  padding:30px 0px;
+  padding: 30px 0px;
 }
 
-.name{
+.name {
   height: 100%;
   font-family: var(--font-family-big);
   font-size: var(--font-size-lg-large);
@@ -23,7 +25,7 @@
   flex-direction: column;
   justify-content: flex-end;
 }
-.profile{
+.profile {
   height: 100%;
   font-family: var(--font-family-small);
   font-size: var(--font-size-large);
@@ -33,7 +35,7 @@
   justify-content: end;
 }
 
-.contact-item{
+.contact-item {
   height: 100%;
   color: var(--font-color-fade);
   text-decoration: none;
@@ -41,4 +43,148 @@
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-small);
   text-align: right;
+  transition: 0.3s;
+}
+.contact-item:hover {
+  color: var(--font-color);
+  transform: scale(1.1);
+  padding-right: 30px;
+}
+
+.contact-item i {
+  font-size: var(--font-size-large);
+}
+.contact-item:hover .fa-linkedin {
+  color: #0077b5;
+}
+.contact-item:hover .fa-github-square {
+  color: #121212;
+}
+.contact-item:hover .fa-user-tie {
+  color: #074185;
+}
+.contact-item:hover .fa-envelope {
+  color: #e63131;
+}
+.contact-item:hover .fa-phone-square {
+  color: #0b327a;
+}
+/* ENDS HERE */
+
+/* USER-INFO-SECTION: STARTS FROM HERE */
+.user-info {
+  font-family: var(--font-family-small);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-medium);
+  line-height: 20px;
+  text-align: justify;
+  word-spacing: 5px;
+}
+/* ENDS HERE */
+
+/* USER-DETAILS-SECTION */
+.user-details-div{
+  display: flex;
+  flex-direction: row;
+}
+.left-section{
+  width: 40%;
+}
+.mid-section{
+  width: 5%;
+}
+.right-section{
+  width: 55%;
+}
+/* ENDS HERE */
+
+.grades-section, .experience-section, .project-section{
+  width: 100%;
+  border-bottom: 1px solid var(--font-color);
+}
+
+.section-header{
+  font-family: var(--font-family-big);
+  font-size: var(--font-size-lg-small);
+  font-weight: var(--font-weight-large);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  height: 50px;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.course-org{
+  padding: 2px 0px;
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-lg-small);
+}
+
+.course-org span{
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+}
+
+.marks-timeline{
+  padding: 2px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.marks{
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-small);
+}
+.marks span{
+  text-transform: uppercase;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  margin: 0px 2px;
+}
+.timeline{
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  margin: 0px 2px;
+}
+
+.experience, .organisation-timeline{
+  display: flex;
+  flex-direction: row;
+}
+.organisation-timeline{
+  justify-content: space-between;
+  padding-bottom:5px;
+}
+.icon-div{
+  padding-bottom:5px;
+  width: 10px;
+}
+
+.organisation-timeline-desc-responsiblity{
+  width: calc(100% - 10px);
+}
+
+.resList{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.organisation{
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-large);
+}
+
+.responsiblity-item{
+  border:1px solid var(--border-color-blue);
+  font-size: var(--font-size-sm-small);
+  margin: 2px;
+  border-radius:20px ;
+  padding: 4px 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--font-color-blue);
 }
