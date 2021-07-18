@@ -88,13 +88,13 @@
   flex-direction: row;
 }
 .left-section {
-  width: 40%;
+  width: 48%;
 }
 .mid-section {
-  width: 5%;
+  width: 4%;
 }
 .right-section {
-  width: 55%;
+  width: 48%;
 }
 /* ENDS HERE */
 
@@ -265,6 +265,8 @@
   font-weight: var(--font-weight-lg-small);
   font-size: var(--font-size-small);
   text-align: end;
+  color: var(--font-normal-color);
+  font-style: italic;
 }
 
 .section-header div:hover{
@@ -272,17 +274,18 @@
   animation: glow 1s ease-in-out infinite alternate;
   width: 100%;
 }
+.grades-section:hover,
+.experience-section:hover,
+.project-section:hover,
+.certificate-section:hover,
+.hobbie-intrest-section:hover,
+.acheivment-section:hover,
+.skills-section:hover
+{
+  animation: color-border 5s infinite;
+}
 
-@keyframes glow {
-  from {
-    text-shadow: 0 0 20px  #bee826,
-    0 0 60px  #c4e826,
-    0 0 100px  #94e826;
-  }
-
-  to {
-    text-shadow:0 0 20px  #2663e8,
-    0 0 60px  #2696e8,
-    0 0 100px  #2696e8;
-  }
+.contacts span{
+  padding-left: 4px;
+  padding-right: 4px;
 }

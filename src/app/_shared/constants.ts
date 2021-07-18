@@ -106,9 +106,9 @@ export const projectList:{
     link:""
   },
   {
-    name:"Gray-Scale",
+    name:"Portfolio",
     desc:"This is my portfolio which is made for fun, technology used is Angular.",
-    link:"Gray-scale.herokuapp.com"
+    link:"https://arunsaini.herokuapp.com"
   },
 ]
 
