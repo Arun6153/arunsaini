@@ -107,18 +107,28 @@
 .skills-section {
   width: 100%;
   border-bottom: 1px solid var(--font-color);
+  padding:10px 0px 5px;
 }
 
 .section-header {
+  height: 40px;
+  /* display: flex;
+  align-items: center; */
+  position: relative;
+  transition: width 2s;
+  white-space: nowrap;
+  /* width: 100%; */
+  width:fit-content;
+}
+.section-header  div{
+  position: relative;
+  transition: .3s;
   font-family: var(--font-family-big);
   font-size: var(--font-size-lg-small);
   font-weight: var(--font-weight-large);
   letter-spacing: 2px;
   text-transform: uppercase;
-  height: 50px;
-  display: flex;
-  align-items: flex-end;
-  width: 100%;
+  text-align: center;
 }
 
 .course-org {
@@ -257,4 +267,22 @@
   text-align: end;
 }
 
+.section-header div:hover{
+  padding-left: 5px;
+  animation: glow 1s ease-in-out infinite alternate;
+  width: 100%;
+}
 
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px  #bee826,
+    0 0 60px  #c4e826,
+    0 0 100px  #94e826;
+  }
+
+  to {
+    text-shadow:0 0 20px  #2663e8,
+    0 0 60px  #2696e8,
+    0 0 100px  #2696e8;
+  }
+}

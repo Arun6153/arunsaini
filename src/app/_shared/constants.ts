@@ -2,8 +2,8 @@ export const userInfo: string = "An independent and self-motivated developer wit
 "experience in the development of Web-based applications, spanning end-to-end project lifecycle using web technologies. Involved in "+
 "product management. The tech stack on which I am currently working on is Angular, MSSQL, and .NET C#.";
 
-export const section_grade: string = "grades";
-export const section_exper: string = "EXPEREINCES AND THE OTHER ACTIVITIES";
+export const section_grade: string = "Education";
+export const section_exper: string = "EXPEREINCES";
 export const section_project: string = "PROJECTS";
 export const section_acheiv: string = "ACHIEVMENTS";
 export const section_certification: string = "CERTIFICATION";
@@ -78,17 +78,6 @@ export const experienceList:{
     responsiblities:{
       title:"Responsiblities",
       resList:["Front-End", "Back-End", "Trained new joiners twice", "Direct Reporting to PM/BA", "Database", "Delivered session on Front-End Architecture Design more than once", "Designed critical code structures"],
-    }
-  },
-  {
-    icon:"fas fa-caret-right",
-    organisation:"5Stars in Java, 4Stars in Problem Solving - HackerRank",
-    timeline:"",
-    timelineIcon:"",
-    description:"",
-    responsiblities:{
-      title:"Responsiblities",
-      resList:[],
     }
   }
 ]
@@ -189,6 +178,12 @@ export const achievmentList:{
     desc:"Worked on client side for a 1.6 year, then in July 2021 they absorbed me from CodeQuotient for SDE position",
     org:""
   },
+  {
+    icon:"fas fa-caret-right",
+    rank:"",
+    desc:"5Stars in Java, 4Stars in Problem Solving",
+    org:"HackerRank"
+  }
 ]
 
 export const skillList:{

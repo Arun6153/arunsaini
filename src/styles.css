@@ -1,12 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
 
 *{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: var(--font-family-small);
+  cursor: none !important;
 }
 
 :root{
@@ -15,7 +17,7 @@
 
   /* FONT-FAMILY */
   --font-family-big:'Anton', sans-serif;
-  --font-family-small:'Comfortaa', cursive;
+  --font-family-small:'Quicksand', sans-serif;
 
   /* FONT-COLORs */
   --font-color: #121212;
@@ -100,3 +102,5 @@
   opacity: .2;
   transform: translate(-30%,-30% );
 }
+
+
