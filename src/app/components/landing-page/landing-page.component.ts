@@ -9,6 +9,7 @@ import * as constants from '../../_shared/constants';
 export class LandingPageComponent implements OnInit {
 
   public constants = constants;
+  public activeOp:number = -1;
 
   @ViewChild("cursor", { read: ElementRef }) cursor: ElementRef;
   public tempSelector:any;
@@ -49,4 +50,16 @@ export class LandingPageComponent implements OnInit {
     });
   }
 
+  public mouseOnAndOff(operation:number,isOn:boolean):void{
+
+    this.activeOp = operation
+
+    switch(operation)
+    {
+      case 1: {
+
+        break;
+      }
+    }
+  }
 }

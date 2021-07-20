@@ -289,3 +289,39 @@
   padding-left: 4px;
   padding-right: 4px;
 }
+
+.side-features{
+  position: absolute;
+  left: 25px;
+  top:40vh;
+  width: 50px;
+  background-color: white;
+  border-radius: 25px;
+  z-index: 10;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.side-items{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding:0px 5px;
+}
+
+.side-item{
+  height: 50px;
+  border-radius: 25px;
+  margin: 10px 0px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+}
+
+.side-item:hover{
+  background-color: var(--bg-color-dark);
+  color: white;
+}
