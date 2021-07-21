@@ -11,8 +11,15 @@ export class LandingPageComponent implements OnInit {
   public constants = constants;
   public activeOp:number = -1;
 
+  // DIV FOR CURSOR REF
   @ViewChild("cursor", { read: ElementRef }) cursor: ElementRef;
-  public tempSelector:any;
+  public aliasCursorSelector:any;
+
+  // DIV FOR CURSOR REF
+  @ViewChild("drag", { read: ElementRef }) drag: ElementRef;
+  public itemDivDrag:any;
+  public isClickedDragDiv:boolean = false
+
   constructor(elem:ElementRef) { }
 
   ngOnInit() {
@@ -21,7 +28,9 @@ export class LandingPageComponent implements OnInit {
 
   public ngAfterViewInit ():void
   {
-    this.tempSelector = this.cursor.nativeElement;
+    this.aliasCursorSelector = this.cursor.nativeElement;
+    this.itemDivDrag = this.drag.nativeElement;
+
     var timeout;
 
     //follow cursor on mousemove
@@ -29,14 +38,20 @@ export class LandingPageComponent implements OnInit {
       let x = e.pageX;
       let y = e.pageY;
 
-      this.tempSelector.style.top = y + "px";
-      this.tempSelector.style.left = x + "px";
-      this.tempSelector.style.display = "block";
+      this.aliasCursorSelector.style.top = y + "px";
+      this.aliasCursorSelector.style.left = x + "px";
+      this.aliasCursorSelector.style.display = "block";
+
+      if(this.isClickedDragDiv)
+      {
+        this.itemDivDrag.style.top = y+(-20) + "px";
+        this.itemDivDrag.style.left = x + "px";
+      }
 
       //cursor effects when mouse stopped
       const mouseStopped = ()=>{
-        if(this.tempSelector)
-          this.tempSelector.style.display = "none";
+        if(this.aliasCursorSelector)
+          this.aliasCursorSelector.style.display = "none";
       };
 
       clearTimeout(timeout);
@@ -45,8 +60,8 @@ export class LandingPageComponent implements OnInit {
 
     //cursor effects when mouseout
     document.addEventListener("mouseout", () => {
-      if(this.tempSelector)
-      this.tempSelector.style.display = "none";
+      if(this.aliasCursorSelector)
+      this.aliasCursorSelector.style.display = "none";
     });
   }
 

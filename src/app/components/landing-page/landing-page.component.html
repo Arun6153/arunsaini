@@ -1,9 +1,13 @@
-<div class="god-container">
+<div class="god-container" (click)="isClickedDragDiv = false">
   <div class="cursor" #cursor></div>
 
-  <div class="side-features">
+  <div class="side-features" #drag (mouseup)="isClickedDragDiv = false">
     <div class="side-items">
-      <div class="side-item" (mouseover)="mouseOnAndOff(1, true);" (mouseout)="mouseOnAndOff(1, false);">
+      <div class="side-item"
+        (mousedown)="isClickedDragDiv = true"
+        (onmouseup)="isClickedDragDiv = false"
+        (mouseover)="mouseOnAndOff(1, true);"
+        (mouseout)="mouseOnAndOff(1, false);">
         <i class="fas fa-grip-lines"></i>
       </div>
       <div class="side-item" (mouseover)="mouseOnAndOff(2, true);" (mouseout)="mouseOnAndOff(2, false);">
@@ -15,7 +19,7 @@
     </div>
   </div>
 
-  <div class="main-div">
+  <div class="main-div" [style]="{'user-select:none':isClickedDragDiv }">
     <!-- DEMOGRAPHIC INFORMATION -->
     <div class="demographic-section">
       <div class="name-profile">
