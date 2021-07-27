@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as constants from '../../_shared/constants';
+import jsPDF from 'jspdf';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,6 +8,8 @@ import * as constants from '../../_shared/constants';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
+  titleOfFile = 'CV - Arun Saini';
+  @ViewChild('pdfResume') pdfResume: ElementRef;
 
   public constants = constants;
   public activeOp:number = -1;
@@ -76,5 +79,24 @@ export class LandingPageComponent implements OnInit {
         break;
       }
     }
+  }
+
+  public downloadAsPDF() {
+    const doc = new jsPDF();
+    let mywindow = window.open('', 'PRINT', 'height=650,width=900,top=100,left=150');
+
+    mywindow.document.write(`<html><head><title>${this.titleOfFile}</title>`);
+    mywindow.document.write('</head><body >');
+    mywindow.document.write(document.getElementById("pdfResume").innerHTML);
+    mywindow.document.write('</body></html>');
+
+    mywindow.document.close(); // necessary for IE >= 10
+    mywindow.focus(); // necessary for IE >= 10*/
+
+    mywindow.print();
+    mywindow.close();
+
+    doc.html(`<html><head><title>${this.titleOfFile}</title></head><body>` + document.getElementById("pdfResume").innerHTML + `</body></html>`);
+    doc.save(this.titleOfFile+'.pdf');
   }
 }

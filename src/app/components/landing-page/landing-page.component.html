@@ -3,23 +3,23 @@
 
   <div class="side-features" #drag (mouseup)="isClickedDragDiv = false">
     <div class="side-items">
-      <div class="side-item tooltip"
+      <div class="side-item"
         (mousedown)="isClickedDragDiv = true"
         (onmouseup)="isClickedDragDiv = false"
         (mouseover)="mouseOnAndOff(1, true);"
         (mouseout)="mouseOnAndOff(1, false);">
-        <i class="fas fa-grip-lines"></i><span class="tooltiptext">Tooltip text</span>
+        <i class="fas fa-grip-lines"></i>
       </div>
-      <div class="side-item tooltip" (mouseover)="mouseOnAndOff(2, true);" (mouseout)="mouseOnAndOff(2, false);">
-        <i class="fas fa-file-download"></i><span class="tooltiptext">Tooltip text</span>
+      <div class="side-item" (click)="downloadAsPDF()" (mouseover)="mouseOnAndOff(2, true);" (mouseout)="mouseOnAndOff(2, false);">
+        <i class="fas fa-file-download"></i>
       </div>
-      <div class="side-item tooltip" (mouseover)="mouseOnAndOff(3, true);" (mouseout)="mouseOnAndOff(3, false);">
-        <i class="fas fa-sliders-h"></i><span class="tooltiptext">Tooltip text</span>
+      <div class="side-item" (mouseover)="mouseOnAndOff(3, true);" (mouseout)="mouseOnAndOff(3, false);">
+        <i class="fas fa-sliders-h"></i>
       </div>
     </div>
   </div>
 
-  <div class="main-div" [style]="{'user-select:none':isClickedDragDiv }">
+  <div class="main-div" id="pdfResume" [style]="{'user-select:none':isClickedDragDiv }">
     <!-- DEMOGRAPHIC INFORMATION -->
     <div class="demographic-section">
       <div class="name-profile">
