@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as constants from '../../_shared/constants';
 import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-landing-page',
@@ -82,21 +83,42 @@ export class LandingPageComponent implements OnInit {
   }
 
   public downloadAsPDF() {
-    const doc = new jsPDF();
-    let mywindow = window.open('', 'PRINT', 'height=650,width=900,top=100,left=150');
+    // let DATA = this.pdfResume.nativeElement;
+    // let doc = new jsPDF('p','pt', 'a4');
 
-    mywindow.document.write(`<html><head><title>${this.titleOfFile}</title>`);
-    mywindow.document.write('</head><body >');
-    mywindow.document.write(document.getElementById("pdfResume").innerHTML);
-    mywindow.document.write('</body></html>');
+    // let handleElement = {
+    //   '#editor':function(element,renderer){
+    //     return true;
+    //   }
+    // };
+    // doc.fromHTML(DATA.innerHTML,15,15,{
+    //   'width': 200,
+    //   'elementHandlers': handleElement
+    // });
 
-    mywindow.document.close(); // necessary for IE >= 10
-    mywindow.focus(); // necessary for IE >= 10*/
+    const DATA = this.pdfResume.nativeElement;
+    const doc: jsPDF = new jsPDF("p","px",[1066.8, 1453]);
+    doc.html(DATA, {
+      callback: (doc) => {
+        doc.output("dataurlnewwindow");
+      }
+    });
+    doc.save('Arun Saini - CV.pdf');
 
-    mywindow.print();
-    mywindow.close();
-
-    doc.html(`<html><head><title>${this.titleOfFile}</title></head><body>` + document.getElementById("pdfResume").innerHTML + `</body></html>`);
-    doc.save(this.titleOfFile+'.pdf');
   }
 }
+
+// let DATA = document.getElementById('pdfResume');
+
+//     html2canvas(DATA).then(canvas => {
+
+//         let fileWidth = 208;
+//         let fileHeight = canvas.height * fileWidth / canvas.width;
+
+//         const FILEURI = canvas.toDataURL('image/png')
+//         let PDF = new jsPDF();
+//         let position = 0;
+//         PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight)
+
+//         PDF.save('angular-demo.pdf');
+//     });
