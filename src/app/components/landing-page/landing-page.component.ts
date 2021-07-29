@@ -86,39 +86,10 @@ export class LandingPageComponent implements OnInit {
     let DATA = document.getElementById('pdfResume');
 
     html2canvas(DATA).then(canvas => {
-        let fileWidth = 220;
-        let fileHeight = canvas.height * fileWidth / canvas.width;
-
         const FILEURI = canvas.toDataURL('image/png')
-        let PDF = new jsPDF();
-        PDF.addImage(FILEURI, 'PNG', 0, 5, fileWidth, fileHeight)
-
+        let PDF = new jsPDF('p','pt', [canvas.width+10, canvas.height]);
+        PDF.addImage(FILEURI, 'JPEG', 0, 0, canvas.width, canvas.height)
         PDF.save('Arun Saini - CV.pdf');
     });
   }
 }
-
-// let DATA = document.getElementById('pdfResume');
-
-//     html2canvas(DATA).then(canvas => {
-
-//         let fileWidth = 208;
-//         let fileHeight = canvas.height * fileWidth / canvas.width;
-
-//         const FILEURI = canvas.toDataURL('image/png')
-//         let PDF = new jsPDF();
-//         let position = 0;
-//         PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight)
-
-//         PDF.save('Arun Saini - CV.pdf');
-//     });
-
-// const DATA = this.pdfResume.nativeElement;
-//     const doc: jsPDF = new jsPDF("p","px",[1066.8, 1453]);
-//     doc.html(DATA, {
-//       callback: (doc) => {
-//         doc.output("dataurlnewwindow");
-//       }
-//     });
-//     doc.save('Arun Saini - CV.pdf');
-//   }
