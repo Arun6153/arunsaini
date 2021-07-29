@@ -83,28 +83,18 @@ export class LandingPageComponent implements OnInit {
   }
 
   public downloadAsPDF() {
-    // let DATA = this.pdfResume.nativeElement;
-    // let doc = new jsPDF('p','pt', 'a4');
+    let DATA = document.getElementById('pdfResume');
 
-    // let handleElement = {
-    //   '#editor':function(element,renderer){
-    //     return true;
-    //   }
-    // };
-    // doc.fromHTML(DATA.innerHTML,15,15,{
-    //   'width': 200,
-    //   'elementHandlers': handleElement
-    // });
+    html2canvas(DATA).then(canvas => {
+        let fileWidth = 220;
+        let fileHeight = canvas.height * fileWidth / canvas.width;
 
-    const DATA = this.pdfResume.nativeElement;
-    const doc: jsPDF = new jsPDF("p","px",[1066.8, 1453]);
-    doc.html(DATA, {
-      callback: (doc) => {
-        doc.output("dataurlnewwindow");
-      }
+        const FILEURI = canvas.toDataURL('image/png')
+        let PDF = new jsPDF();
+        PDF.addImage(FILEURI, 'PNG', 0, 5, fileWidth, fileHeight)
+
+        PDF.save('Arun Saini - CV.pdf');
     });
-    doc.save('Arun Saini - CV.pdf');
-
   }
 }
 
@@ -120,5 +110,15 @@ export class LandingPageComponent implements OnInit {
 //         let position = 0;
 //         PDF.addImage(FILEURI, 'PNG', 0, position, fileWidth, fileHeight)
 
-//         PDF.save('angular-demo.pdf');
+//         PDF.save('Arun Saini - CV.pdf');
 //     });
+
+// const DATA = this.pdfResume.nativeElement;
+//     const doc: jsPDF = new jsPDF("p","px",[1066.8, 1453]);
+//     doc.html(DATA, {
+//       callback: (doc) => {
+//         doc.output("dataurlnewwindow");
+//       }
+//     });
+//     doc.save('Arun Saini - CV.pdf');
+//   }
