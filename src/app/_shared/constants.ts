@@ -1,4 +1,6 @@
-export const userInfo: string = "An independent and self-motivated developer with proven and tested skills. More than a 1.5 year of  "+
+import { monthDiff } from "../lib/CommonFunction";
+
+export const userInfo: string = "An independent and self-motivated developer with proven and tested skills. More than a "+monthDiff(Date.now())+" year of  "+
 "experience in the development of Web-based applications, spanning end-to-end project lifecycle using web technologies. Involved in "+
 "product management. The tech stack on which I am currently working on is Angular, MSSQL, and .NET C#.";
 
@@ -57,7 +59,7 @@ export const experienceList:{
 }[] = [
   {
     icon:"fas fa-caret-right",
-    organisation:"Mirra - Health Care : SDE",
+    organisation:"Mirra - Health Care : SDE-I",
     timeline:"July, 21 - Present",
     timelineIcon:"far fa-clock",
     description:"Created a product from a scratch. A medical insurance coverage platform which is fundamentally based on CMS"+
@@ -69,7 +71,7 @@ export const experienceList:{
   },
   {
     icon:"fas fa-caret-right",
-    organisation:"CodeQuotient : SDE Intern",
+    organisation:"CodeQuotient : SDE-I",
     timeline:"March, 20 - June, 21",
     timelineIcon:"far fa-clock",
     description:"Dealt with a critical client on client side ( Mirra-Health Care ) in Medicare domain team. Worked on "+
@@ -92,18 +94,24 @@ export const projectList:{
   {
     name:"Medicare Advantage ",
     desc:"This is a health care system which is made by using Angular, .NET C#, and MSSQL. ",
-    link:"",
+    link:"In progress...",
     small:"- US Health Care"
   },
   {
+    name:"CreslinCare",
+    desc:"A user oriented technology driven platform to ensure confidentiality and personalised experience for customer. A whole front-end is designed by me.",
+    link:"https://creslincare.com",
+    small:"- Indian Health Care (Freelancing)"
+  },
+  {
     name:"Answer Den",
-    desc:"Grievances System using MERN Stack and Web Scrapper using Cheerio",
-    link:""
+    desc:"Grievances System using MERN Stack and Web Scrapper(Cheerio).",
+    link:"In progress..."
   },
   {
     name:"Quiz Camp",
-    desc:"Its a platform where admin can create quizzes and user can attempt them. Technology used: NodeJS, MongoDB, and JS. Did pure DOM manipulation",
-    link:""
+    desc:"Its a platform where admin can create quizzes and user can attempt them. Technology used: NodeJS, MongoDB, and JS. Did pure DOM manipulation.",
+    link:"https://quizcamp.herokuapp.com"
   },
   {
     name:"Portfolio",
