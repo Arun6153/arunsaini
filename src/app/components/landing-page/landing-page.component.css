@@ -116,6 +116,7 @@
   width: 100%;
   border-bottom: 1px solid var(--font-color);
   padding:10px 0px 5px;
+  transition: .2s;
 }
 
 .section-header {
@@ -178,6 +179,10 @@
   display: flex;
   flex-direction: row;
 }
+/* .experience{
+  transition: .3s;
+  border-radius: 10px;
+} */
 .skills{
   justify-content: space-between;
 }
@@ -333,3 +338,17 @@
   background-color: var(--bg-color-dark);
   color: white;
 }
+
+/* .experience:hover{
+  background-color: #272727;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 10px;
+  margin: 2px;
+  transition: .3s;
+  box-shadow: 0px 0px 5px 1px #494949;
+}
+.experience:hover .bubble{
+  color: #52baff;
+  border-color: #52baff;
+} */
